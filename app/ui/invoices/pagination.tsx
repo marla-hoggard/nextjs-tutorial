@@ -21,10 +21,10 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
 
   return (
     <>
-      <div className='inline-flex'>
-        <PaginationArrow direction='left' href={createPageURL(currentPage - 1)} isDisabled={currentPage <= 1} />
+      <div className="inline-flex">
+        <PaginationArrow direction="left" href={createPageURL(currentPage - 1)} isDisabled={currentPage <= 1} />
 
-        <div className='flex -space-x-px'>
+        <div className="flex -space-x-px">
           {allPages.map((page, index) => {
             let position: 'first' | 'last' | 'single' | 'middle' | undefined;
 
@@ -46,7 +46,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
         </div>
 
         <PaginationArrow
-          direction='right'
+          direction="right"
           href={createPageURL(currentPage + 1)}
           isDisabled={currentPage >= totalPages}
         />
@@ -99,7 +99,7 @@ function PaginationArrow({
     'ml-2 md:ml-4': direction === 'right',
   });
 
-  const icon = direction === 'left' ? <ArrowLeftIcon className='w-4' /> : <ArrowRightIcon className='w-4' />;
+  const icon = direction === 'left' ? <ArrowLeftIcon className="w-4" /> : <ArrowRightIcon className="w-4" />;
 
   return isDisabled ? (
     <div className={className}>{icon}</div>
