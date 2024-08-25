@@ -1,6 +1,10 @@
-type Props = {};
+import { Metadata } from 'next';
 
-const Page: React.FC<Props> = () => {
+export const metadata: Metadata = {
+  title: 'Customers',
+};
+
+const Page: React.FC<{}> = () => {
   return <p>Customers Page</p>;
 };
 
